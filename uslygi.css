@@ -634,10 +634,31 @@ body.modal-open {
   .lead { font-size: 1.05rem; }
   .title { font-size: clamp(2.2rem, 10vw, 4rem); }
 
-  .navbar { padding: 0 15px; height: 60px; }
-  .navbar-logo img { height: 34px; }
-  .navbar-menu { gap: 12px; flex-wrap: nowrap;}
-  .navbar-menu a { font-size: 13px; flex-wrap: nowrap; }
+  /* Настройки шапки */
+  .navbar { 
+    padding: 0 15px; 
+    height: 55px; /* Высота шапки */
+    flex-direction: row; /* Логотип и меню в одну строку */
+  }
+  
+  .navbar-logo {
+    font-size: 16px; /* Уменьшаем размер текстового логотипа */
+    letter-spacing: 2px;
+  }
+  
+  .navbar-logo img { 
+    height: 24px; /* Если логотип - картинка */
+  }
+  
+  .navbar-menu { 
+    gap: 10px; /* Уменьшаем расстояние между ссылками */
+    flex-wrap: nowrap; /* Запрещаем перенос строк */
+  }
+  
+  .navbar-menu a { 
+    font-size: 12px; /* Размер шрифта ссылок */
+    white-space: nowrap; /* Запрещаем перенос текста внутри ссылки */
+  }
 
   .card { padding: 35px 25px; min-height: 140px; }
   .grid { gap: 20px; padding: 0 20px; }
@@ -668,18 +689,10 @@ body.modal-open {
     font-size: 13px;
     border-radius: 8px;
   }
-
-  .navbar { height: 56px; }
-  .navbar-menu { gap: 14px; }
-  .navbar-menu a { font-size: 13px; }
-  .navbar-logo img { height: 30px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-top {
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-  }
-  .scroll-top:hover {
-    transform: none;
-  }
+  
+  /* Чуть подстраиваем шапку для самых узких экранов */
+  .navbar { height: 50px; padding: 0 10px; }
+  .navbar-logo { font-size: 14px; }
+  .navbar-menu { gap: 8px; }
+  .navbar-menu a { font-size: 11px; }
 }

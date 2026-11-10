@@ -522,22 +522,54 @@ img {
 }
 
 @media (max-width: 768px) {
-  .navbar { padding: 0 20px; height: 60px; }
-  .navbar-logo img { height: 34px; }
-  .navbar-menu { gap: 18px; }
-  .navbar-menu a { font-size: 14px; }
+  /* --- НОВЫЕ НАСТРОЙКИ ШАПКИ --- */
+  .navbar { 
+    padding: 0 15px; /* Уменьшили отступы по бокам */
+    height: 55px;    /* Сделали шапку чуть тоньше */
+    flex-direction: row; /* Строго в одну строку */
+  }
+  .navbar-logo img { 
+    height: 24px;    /* Уменьшили логотип (если это картинка) */
+  }
+  .navbar-logo {
+    font-size: 16px; /* Уменьшили логотип (если это текст) */
+    letter-spacing: 1.5px;
+  }
+  .navbar-menu { 
+    gap: 12px;       /* Уменьшили расстояние между ссылками */
+    flex-wrap: nowrap; 
+  }
+  .navbar-menu a { 
+    font-size: 12px; /* Сделали ссылки компактнее */
+    white-space: nowrap; /* Запретили перенос слов (например, "Контакты") */
+  }
 
+  /* Остальные стили для этой ширины */
   .page-hero { padding: 100px 20px 60px; min-height: 60vh; }
   .page-hero__eyebrow { letter-spacing: 4px; font-size: 0.75rem; }
   .page-hero__lead { font-size: 1rem; }
 }
 
 @media (max-width: 600px) {
-  .navbar { height: 56px; }
-  .navbar-menu { gap: 14px; }
-  .navbar-menu a { font-size: 13px; }
-  .navbar-logo img { height: 30px; }
+  /* --- ЧУТЬ УЖИМАЕМ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ --- */
+  .navbar { 
+    height: 50px; 
+    padding: 0 10px;
+  }
+  .navbar-logo img { 
+    height: 20px; 
+  }
+  .navbar-logo {
+    font-size: 14px;
+  }
+  .navbar-menu { 
+    gap: 8px; 
+  }
+  .navbar-menu a { 
+    font-size: 11px; 
+  }
 
+  /* Остальные стили для этой ширины */
   .about-section,
   .services-section,
   .why-section,

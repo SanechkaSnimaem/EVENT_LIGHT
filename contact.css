@@ -458,11 +458,29 @@ a.contact-value:hover {
 }
 
 @media (max-width: 768px) {
-  .navbar { padding: 0 20px; height: 60px; }
-  .navbar-logo img { height: 34px; }
-  .navbar-menu { gap: 18px; }
-  .navbar-menu a { font-size: 14px; }
+  /* --- НАСТРОЙКИ ШАПКИ --- */
+  .navbar { 
+    padding: 0 15px; /* Уменьшаем боковые отступы */
+    height: 55px;    /* Делаем шапку чуть тоньше */
+    flex-direction: row; /* Строго в одну строку */
+  }
+  .navbar-logo img { 
+    height: 24px;    /* Уменьшаем логотип-картинку */
+  }
+  .navbar-logo {
+    font-size: 16px; /* Уменьшаем логотип-текст */
+    letter-spacing: 1.5px;
+  }
+  .navbar-menu { 
+    gap: 12px;       /* Уменьшаем расстояние между ссылками */
+    flex-wrap: nowrap; /* Запрещаем перенос меню на новую строку */
+  }
+  .navbar-menu a { 
+    font-size: 12px; /* Уменьшаем шрифт ссылок */
+    white-space: nowrap; /* Запрещаем перенос слов внутри ссылки */
+  }
 
+  /* --- ОСТАЛЬНЫЕ СТИЛИ --- */
   .page-hero { padding: 100px 20px 60px; min-height: 55vh; }
   .page-hero__eyebrow { letter-spacing: 4px; font-size: 0.75rem; }
   .page-hero__lead { font-size: 1rem; }
@@ -476,11 +494,22 @@ a.contact-value:hover {
 }
 
 @media (max-width: 480px) {
-  .navbar { height: 56px; }
-  .navbar-menu { gap: 14px; }
-  .navbar-menu a { font-size: 13px; }
-  .navbar-logo img { height: 30px; }
+  /* --- ЧУТЬ УЖИМАЕМ ДЛЯ САМЫХ УЗКИХ ЭКРАНОВ --- */
+  .navbar { 
+    height: 50px; 
+    padding: 0 10px;
+  }
+  .navbar-menu { 
+    gap: 8px; 
+  }
+  .navbar-menu a { 
+    font-size: 11px; 
+  }
+  .navbar-logo img { 
+    height: 20px; 
+  }
 
+  /* --- ОСТАЛЬНЫЕ СТИЛИ --- */
   .contacts-section,
   .cta-section { padding: 60px 16px; }
 
