@@ -458,61 +458,63 @@ a.contact-value:hover {
 }
 
 @media (max-width: 768px) {
-  /* --- НАСТРОЙКИ ШАПКИ --- */
+  /* --- МАКСИМАЛЬНО КОМПАКТНАЯ ШАПКА --- */
   .navbar { 
-    padding: 0 15px; /* Уменьшаем боковые отступы */
-    height: 55px;    /* Делаем шапку чуть тоньше */
-    flex-direction: row; /* Строго в одну строку */
+    height: auto; 
+    padding: 8px 0; /* Убираем боковые отступы шапки полностью */
+    flex-direction: column; 
+    justify-content: center; 
+    gap: 4px; /* Минимальное расстояние между лого и меню */
   }
-  .navbar-logo img { 
-    height: 24px;    /* Уменьшаем логотип-картинку */
+  
+  .navbar-logo { 
+    font-size: 17px; /* Чуть меньше логотип */
+    letter-spacing: 1px; /* Сжимаем буквы в логотипе */
   }
-  .navbar-logo {
-    font-size: 16px; /* Уменьшаем логотип-текст */
-    letter-spacing: 1.5px;
-  }
+  
   .navbar-menu { 
-    gap: 12px;       /* Уменьшаем расстояние между ссылками */
-    flex-wrap: nowrap; /* Запрещаем перенос меню на новую строку */
+    gap: 10px; /* Минимальный отступ между ссылками */
+    justify-content: center;
+    width: 100%;
+    padding: 0; /* Убираем возможные лишние отступы */
   }
+  
   .navbar-menu a { 
-    font-size: 12px; /* Уменьшаем шрифт ссылок */
-    white-space: nowrap; /* Запрещаем перенос слов внутри ссылки */
+    font-size: 12.5px; /* Оставляем читаемым, но маленьким */
+    letter-spacing: 0; /* Убираем разрядку у ссылок */
   }
 
-  /* --- ОСТАЛЬНЫЕ СТИЛИ --- */
+  /* Остальные стили страницы (без изменений) */
   .page-hero { padding: 100px 20px 60px; min-height: 55vh; }
   .page-hero__eyebrow { letter-spacing: 4px; font-size: 0.75rem; }
   .page-hero__lead { font-size: 1rem; }
-
   .contact-form { padding: 36px 24px; }
   .form-title { font-size: 1.4rem; }
-
   .contacts-socials a { width: 40px; height: 40px; font-size: 0.8rem; }
-
   .map-section iframe { height: 300px; }
 }
 
 @media (max-width: 480px) {
-  /* --- ЧУТЬ УЖИМАЕМ ДЛЯ САМЫХ УЗКИХ ЭКРАНОВ --- */
+  /* --- ДЛЯ УЗКИХ ЭКРАНОВ --- */
   .navbar { 
-    height: 50px; 
-    padding: 0 10px;
+    padding: 6px 0; /* Совсем тонкая шапка */
   }
   .navbar-menu { 
-    gap: 8px; 
+    gap: 8px; /* Ссылки почти вплотную */
   }
   .navbar-menu a { 
-    font-size: 11px; 
+    font-size: 12px; 
   }
   .navbar-logo img { 
-    height: 20px; 
+    height: 22px; /* Логотип-картинка еще меньше */
+  }
+  .navbar-logo {
+    font-size: 15px;
   }
 
-  /* --- ОСТАЛЬНЫЕ СТИЛИ --- */
+  /* Остальные стили */
   .contacts-section,
   .cta-section { padding: 60px 16px; }
-
   .contact-value { font-size: 1rem; }
   .cta-btn { padding: 15px 30px; font-size: 0.9rem; }
 }

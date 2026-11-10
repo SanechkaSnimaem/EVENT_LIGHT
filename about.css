@@ -522,26 +522,34 @@ img {
 }
 
 @media (max-width: 768px) {
-  /* --- НОВЫЕ НАСТРОЙКИ ШАПКИ --- */
+  /* --- КОМПАКТНАЯ ШАПКА (как на 1 фото) --- */
   .navbar { 
-    padding: 0 15px; /* Уменьшили отступы по бокам */
-    height: 55px;    /* Сделали шапку чуть тоньше */
-    flex-direction: row; /* Строго в одну строку */
+    height: auto;            /* Растягиваем по высоте */
+    padding: 8px 0;          /* Убираем боковые отступы */
+    flex-direction: column;  /* Ставим лого и меню друг под другом */
+    justify-content: center;
+    gap: 4px;                /* Минимальное расстояние между ними */
   }
-  .navbar-logo img { 
-    height: 24px;    /* Уменьшили логотип (если это картинка) */
-  }
+  
   .navbar-logo {
-    font-size: 16px; /* Уменьшили логотип (если это текст) */
-    letter-spacing: 1.5px;
+    font-size: 17px;         /* Компактный логотип */
+    letter-spacing: 1px;
   }
+  
+  .navbar-logo img { 
+    height: 24px; 
+  }
+  
   .navbar-menu { 
-    gap: 12px;       /* Уменьшили расстояние между ссылками */
-    flex-wrap: nowrap; 
+    gap: 10px;               /* Ссылки близко друг к другу */
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;         /* Если не влезут, аккуратно перенесутся */
   }
+  
   .navbar-menu a { 
-    font-size: 12px; /* Сделали ссылки компактнее */
-    white-space: nowrap; /* Запретили перенос слов (например, "Контакты") */
+    font-size: 12.5px; 
+    white-space: nowrap; 
   }
 
   /* Остальные стили для этой ширины */
@@ -551,22 +559,21 @@ img {
 }
 
 @media (max-width: 600px) {
-  /* --- ЧУТЬ УЖИМАЕМ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ --- */
+  /* --- ЕЩЕ УЖЕ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ --- */
   .navbar { 
-    height: 50px; 
-    padding: 0 10px;
+    padding: 6px 0; 
   }
-  .navbar-logo img { 
-    height: 20px; 
-  }
-  .navbar-logo {
-    font-size: 14px;
+  .navbar-logo { 
+    font-size: 15px; 
   }
   .navbar-menu { 
     gap: 8px; 
   }
   .navbar-menu a { 
-    font-size: 11px; 
+    font-size: 12px; 
+  }
+  .navbar-logo img { 
+    height: 20px; 
   }
 
   /* Остальные стили для этой ширины */

@@ -634,30 +634,34 @@ body.modal-open {
   .lead { font-size: 1.05rem; }
   .title { font-size: clamp(2.2rem, 10vw, 4rem); }
 
-  /* Настройки шапки */
+  /* --- МАКСИМАЛЬНО КОМПАКТНАЯ ШАПКА --- */
   .navbar { 
-    padding: 0 15px; 
-    height: 55px; /* Высота шапки */
-    flex-direction: row; /* Логотип и меню в одну строку */
+    height: auto;            /* Растягиваем по высоте */
+    padding: 8px 0;          /* Убираем боковые отступы */
+    flex-direction: column;  /* Ставим лого и меню друг под другом */
+    justify-content: center;
+    gap: 4px;                /* Минимальное расстояние между ними */
   }
   
   .navbar-logo {
-    font-size: 16px; /* Уменьшаем размер текстового логотипа */
-    letter-spacing: 2px;
+    font-size: 17px;         /* Компактный логотип */
+    letter-spacing: 1px;
   }
   
   .navbar-logo img { 
-    height: 24px; /* Если логотип - картинка */
+    height: 24px; 
   }
   
   .navbar-menu { 
-    gap: 10px; /* Уменьшаем расстояние между ссылками */
-    flex-wrap: nowrap; /* Запрещаем перенос строк */
+    gap: 10px;               /* Ссылки близко друг к другу */
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;         /* Если не влезут, аккуратно перенесутся */
   }
   
   .navbar-menu a { 
-    font-size: 12px; /* Размер шрифта ссылок */
-    white-space: nowrap; /* Запрещаем перенос текста внутри ссылки */
+    font-size: 12.5px; 
+    white-space: nowrap; 
   }
 
   .card { padding: 35px 25px; min-height: 140px; }
@@ -690,9 +694,9 @@ body.modal-open {
     border-radius: 8px;
   }
   
-  /* Чуть подстраиваем шапку для самых узких экранов */
-  .navbar { height: 50px; padding: 0 10px; }
-  .navbar-logo { font-size: 14px; }
+  /* --- ЕЩЕ УЖЕ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ --- */
+  .navbar { padding: 6px 0; }
+  .navbar-logo { font-size: 15px; }
   .navbar-menu { gap: 8px; }
-  .navbar-menu a { font-size: 11px; }
+  .navbar-menu a { font-size: 12px; }
 }
