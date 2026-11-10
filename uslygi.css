@@ -634,10 +634,10 @@ body.modal-open {
   .lead { font-size: 1.05rem; }
   .title { font-size: clamp(2.2rem, 10vw, 4rem); }
 
-  .navbar { padding: 0 20px; height: 60px; }
+  .navbar { padding: 0 15px; height: 60px; }
   .navbar-logo img { height: 34px; }
-  .navbar-menu { gap: 18px; }
-  .navbar-menu a { font-size: 14px; }
+  .navbar-menu { gap: 12px; flex-wrap: nowrap;}
+  .navbar-menu a { font-size: 13px; flex-wrap: nowrap; }
 
   .card { padding: 35px 25px; min-height: 140px; }
   .grid { gap: 20px; padding: 0 20px; }

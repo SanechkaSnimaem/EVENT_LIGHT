@@ -552,7 +552,21 @@ img {
   .hero h1 { font-size: 34px; }
   .hero .container,
   .header { padding: 0 20px; }
-  .menu { display: none; }
+  .header {
+    height: auto; /* Разрешаем шапке растягиваться */
+    flex-direction: column; /* Ставим логотип и меню друг под другом */
+    padding: 15px 20px;
+    gap: 10px;
+  }
+  .menu {
+    display: flex; /* Показываем меню */
+    gap: 20px; /* Уменьшаем расстояние между ссылками */
+    flex-wrap: wrap; /* Разрешаем перенос, если не влезет */
+    justify-content: center; /* Центрируем ссылки */
+  }
+  .menu a {
+    font-size: 13px; /* Чуть уменьшаем шрифт */
+  } 
   .btn { width: 100%; }
   .overlay {
     background: linear-gradient(180deg,
