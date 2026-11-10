@@ -1,0 +1,558 @@
+/* ====================== БАЗА ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;   /* Inter не подключён */
+  background: #1C1C1E;
+  color: #F5F0E8;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ====================== НАВИГАЦИЯ ====================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 60px;
+  background: #1C1C1E;
+  border-bottom: 1px solid rgba(212, 180, 131, 0.15);
+}
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #F5F0E8;
+}
+
+.navbar-logo img {
+  height: 42px;
+  width: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  list-style: none;
+}
+
+.navbar-menu a {
+  position: relative;
+  display: inline-block;
+  color: #F5F0E8;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #D4B483;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #D4B483;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+/* ====================== HERO СТРАНИЦЫ ====================== */
+.page-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 40px 80px;
+  overflow: hidden;
+  background: #111 url('photo/photo_2026-09-30_15-37-24.jpg') center/cover no-repeat;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 28, 30, 0.85) 0%,
+    rgba(28, 28, 30, 0.55) 50%,
+    rgba(28, 28, 30, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.page-hero__eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 6px;
+  color: #D4B483;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.page-hero__title {
+  font-family: Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #F5F0E8;
+  margin-bottom: 28px;
+}
+
+.page-hero__title .highlight {
+  color: #D4B483;
+  font-style: italic;
+}
+
+.page-hero__lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(245, 240, 232, 0.85);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ====================== ОБЩИЕ ЗАГОЛОВКИ ====================== */
+.section-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  color: #D4B483;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #F5F0E8;
+  margin-bottom: 40px;
+}
+
+/* ====================== О КОМПАНИИ ====================== */
+.about-section {
+  background: #1C1C1E;
+  padding: 120px 40px;
+}
+
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(245, 240, 232, 0.85);
+  margin-bottom: 20px;
+}
+
+.about-text strong {
+  color: #D4B483;
+  font-weight: 500;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ====================== ЦИФРЫ ====================== */
+.numbers-section {
+  background: #232326;
+  padding: 80px 40px;
+  border-top: 1px solid rgba(212, 180, 131, 0.15);
+  border-bottom: 1px solid rgba(212, 180, 131, 0.15);
+}
+
+.numbers-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.number-value {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #D4B483;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.number-label {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: rgba(245, 240, 232, 0.7);
+  text-transform: uppercase;
+}
+
+/* ====================== ЧТО МЫ ДЕЛАЕМ ====================== */
+.services-section {
+  background: #1C1C1E;
+  padding: 120px 40px;
+}
+
+.services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #262626;
+  border: 1px solid rgba(212, 180, 131, 0.2);
+  padding: 36px 30px;
+  border-radius: 4px;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 180, 131, 0.6);
+  box-shadow: 0 20px 50px rgba(212, 180, 131, 0.1);
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #F5F0E8;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(245, 240, 232, 0.75);
+}
+
+/* ====================== ПОЧЕМУ МЫ ====================== */
+.why-section {
+  background: #232326;
+  padding: 120px 40px;
+}
+
+.why-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.why-item {
+  padding: 40px 30px;
+  border-top: 2px solid #D4B483;
+  background: rgba(38, 38, 38, 0.5);
+  border-radius: 0 0 4px 4px;
+}
+
+.why-number {
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  color: #D4B483;
+  line-height: 1;
+  margin-bottom: 18px;
+  opacity: 0.6;
+}
+
+.why-item h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #F5F0E8;
+  margin-bottom: 14px;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(245, 240, 232, 0.75);
+}
+
+/* ====================== CTA ====================== */
+.cta-section {
+  background: #232326;
+  padding: 100px 40px;
+  text-align: center;
+  scroll-margin-top: 80px;
+}
+
+.cta-section .container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  color: #F5F0E8;
+  margin-bottom: 20px;
+}
+
+.cta-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(245, 240, 232, 0.85);
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 42px;
+  background: transparent;
+  color: #D4B483;
+  border: 1px solid #D4B483;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #D4B483;
+  color: #1C1C1E;
+  transform: translateY(-2px);
+}
+
+.cta-btn span {
+  transition: transform 0.3s ease;
+}
+
+.cta-btn:hover span {
+  transform: translateX(6px);
+}
+
+/* ====================== ФОРМА ====================== */
+.form-section {
+  background: #1C1C1E;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #262626;
+  border-radius: 16px;
+  padding: 48px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(212, 180, 131, 0.2);
+}
+
+.form-section h2 {
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  color: #F5F0E8;
+  margin-bottom: 12px;
+}
+
+.form-section p {
+  color: #D4B483;
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #F5F0E8;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: #1C1C1E;
+  border: 2px solid #3A3A3C;
+  border-radius: 8px;
+  color: #F5F0E8;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #D4B483;
+  box-shadow: 0 0 0 4px rgba(212, 180, 131, 0.2);
+}
+
+.submit-btn {
+  background: #D4B483;
+  color: #1C1C1E;
+  border: none;
+  padding: 18px 48px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.submit-btn:hover {
+  background: #E8D5B7;
+  transform: translateY(-3px);
+}
+
+.success-message {
+  display: none;
+  color: #D4B483;
+  font-size: 1.3rem;
+  font-weight: 500;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ====================== ФУТЕР ====================== */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 60px;
+  font-size: 1.1rem;
+}
+
+.footer-contacts {
+  margin-top: 30px;
+  color: #ccc;
+}
+
+/* ====================== АДАПТИВ ====================== */
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 50px; }
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 992px) {
+  .navbar { padding: 0 30px; height: 64px; }
+  .navbar-menu { gap: 28px; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-section,
+  .services-section,
+  .why-section,
+  .cta-section { padding: 80px 24px; }
+  .numbers-section { padding: 60px 24px; }
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 0 20px; height: 60px; }
+  .navbar-logo img { height: 34px; }
+  .navbar-menu { gap: 18px; }
+  .navbar-menu a { font-size: 14px; }
+
+  .page-hero { padding: 100px 20px 60px; min-height: 60vh; }
+  .page-hero__eyebrow { letter-spacing: 4px; font-size: 0.75rem; }
+  .page-hero__lead { font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .navbar { height: 56px; }
+  .navbar-menu { gap: 14px; }
+  .navbar-menu a { font-size: 13px; }
+  .navbar-logo img { height: 30px; }
+
+  .about-section,
+  .services-section,
+  .why-section,
+  .cta-section,
+  .form-section { padding: 60px 16px; }
+  .numbers-section { padding: 50px 16px; }
+
+  .services-grid { grid-template-columns: 1fr; }
+  .numbers-grid { grid-template-columns: 1fr; gap: 30px; }
+
+  .service-card { padding: 30px 24px; }
+  .why-item { padding: 30px 24px; }
+
+  .cta-btn { padding: 15px 32px; font-size: 0.9rem; }
+
+  .form-container { padding: 36px 24px; }
+  .form-section h2 { font-size: 1.8rem; }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Light — Аплайтинг для свадеб</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- defer — чтобы скрипт запускался после загрузки DOM -->
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. Шапка -->
+  <header class="header">
+    <div class="logo" style="background-image: url('');">EVENT_LIGHT</div>
+    <nav class="menu">
+      <a href="uslygi.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+
+  <!-- 2. Hero-слайдер -->
+  <section class="hero" id="hero">
+    <div class="hero-bg active" style="background-image: url('photo/572653696_17893463859347047_2452229179020585237_n.jpg');"></div>
+    <div class="hero-bg" style="background-image: url('photo/581867885_17895311958347047_486377633943963629_n.jpg');"></div>
+    <div class="hero-bg" style="background-image: url('photo/543676277_18426498181100277_5958321504370012211_n.jpg');"></div>
+    <div class="hero-bg" style="background-image: url('photo/582799891_17844763572611538_6295649434276760777_n.jpg');"></div>
+
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="text-content">
+        <h1>
+          Свет, который<br>
+          <span class="highlight">превращает вечер в легенду</span>
+        </h1>
+        <p class="subtitle">
+          Премиальный аплайтинг для свадеб, которые запоминаются<br>
+          навсегда — сдержанно, элегантно, безупречно
+        </p>
+        <a href="#form" class="btn" id="cta-btn">
+          Обсудить проект
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="scroll-down">
+        <div class="scroll-icon">
+          <span class="scroll-line"></span>
+        </div>
+        <span class="scroll-text">Листайте вниз</span>
+      </div>
+
+      <div class="slider-dots">
+        <div class="dot active" data-slide="0"></div>
+        <div class="dot" data-slide="1"></div>
+        <div class="dot" data-slide="2"></div>
+        <div class="dot" data-slide="3"></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- 3. Uplighting -->
+  <section class="uplighting-section">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="image-block">
+          <img src="photo/photo_2026-09-30_15-35-07.jpg" alt="Аплайтинг банкетного зала">
+        </div>
+        <div class="text-block">
+          <h1>Аплайтинг для свадьбы</h1>
+          <p>
+            <strong>Аплайтинг (Uplighting)</strong> — это мягкая подсветка стен, потолков
+            и ключевых зон банкетного зала, которая превращает обычное помещение
+            в сказочное пространство.
+          </p>
+          <p>
+            <strong>С помощью аплайтинга</strong> вы можете подобрать идеальный оттенок
+            из 16 миллионов цветов — от тёплого шампанского до глубокого графита.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Галерея -->
+  <section class="gallery-section">
+    <div class="gallery-wrapper">
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="photo/apliting.jpg" alt="Свадебная пара"></div>
+        <div class="gallery-item"><img src="photo/543676277_18426498181100277_5958321504370012211_n.jpg" alt="Оформление зала"></div>
+        <div class="gallery-item"><img src="photo/photo_8_2026-09-30_18-14-20.jpg" alt="Оформление зала"></div>
+        <div class="gallery-item"><img src="photo/photo_2026-09-30_15-37-16.jpg" alt="Освещение сцены"></div>
+        <div class="gallery-item"><img src="photo/photo_2026-09-30_15-36-49.jpg" alt="Первый танец"></div>
+        <div class="gallery-item"><img src="photo/photo_2026-09-30_16-36-18.jpg" alt="Вечеринка"></div>
+        <div class="gallery-item"><img src="photo/photo_2026-09-30_15-37-24.jpg" alt="Танец"></div>
+        <div class="gallery-item"><img src="photo/IMG_4236.PNG" alt="Праздник"></div>
+        <div class="gallery-item"><img src="photo/IMG_3611.JPG" alt="Музыканты"></div>
+        <div class="gallery-item"><img src="photo/photo_2026-09-30_15-34-59.jpg" alt="Мероприятие"></div>
+      </div>
+
+        
+    </div>
+  </section>
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <h2 class="cta-title"></h2>
+      <p class="cta-lead">Позвоните или напишите в мессенджер — ответим так же быстро.</p>
+      <a href="tel:+375291850333" class="cta-btn">
+        +375(33) 685-40-76 <span>→</span>
+      </a>
+        <div class="footer-socials">
+          <span>Наши сети</span>
+          <a href="https://www.instagram.com/event_light.by/" aria-label="Instagram">IG</a>
+                    <a href="https://telegram.org/" aria-label="Telegram">TG</a>
+        </div>
+    </div>
+</section>
+  <!-- 6. Футер -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+
+        <div class="footer-col">
+          <ul class="footer-links">
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="uslygi.html">Услуги</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="#">Политика обработки данных</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="hidden-title">&nbsp;</h3>
+        </div>
+
+        <div class="footer-col contacts">
+          <h3>Наши контакты</h3>
+          <p class="phone">Тел.: <a href="tel:+375(33) 685-40-76">+375(33) 685-40-76</a></p>
+          <p class="email">Email: <a href="mailto:manager@goodtime.by">manager@goodtime.by</a></p>
+          <div class="address">
+            <p>EVENT_LIGHT.by</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-logo">EVENT_LIGHT</div>
+        <div class="footer-copyright">
+          © 2012-2026 ЧУП "ГудТайм". Все права защищены.
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Кнопка "Вверх" — класс scroll-top (как в JS) -->
+    
+  </footer>
+<button class="scroll-top" type="button">
+      <span>Вверх</span>
+    </button>
+</body>
+</html>
