@@ -700,3 +700,44 @@ body.modal-open {
   .navbar-menu { gap: 8px; }
   .navbar-menu a { font-size: 12px; }
 }
+/* ====================== АДАПТИВ ДЛЯ БЛОКОВ УСЛУГ ====================== */
+
+@media (max-width: 992px) {
+  /* Выстраиваем элементы друг под другом (это у вас уже есть, 
+     но я добавил flex для надежности, если grid не сработает) */
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* --- МАГИЯ ПОРЯДКА --- */
+  
+  /* 1. Делаем так, чтобы ТЕКСТ ВСЕГДА был первым */
+  .text-block {
+    order: 1;
+    width: 100%;
+  }
+
+  /* 2. Делаем так, чтобы КАРТИНКА ИЛИ ВИДЕО ВСЕГДА были вторыми */
+  .image-block, 
+  .video-block {
+    order: 2;
+    width: 100%;
+  }
+
+  /* 3. Центрируем медиа-файлы на телефоне */
+  .image-block img, 
+  .video-block video {
+    margin: 0 auto;
+    max-height: 450px; /* Чтобы видео не было слишком высоким на телефоне */
+    width: 100%;
+    object-fit: cover; /* Чтобы картинка красиво заполняла блок */
+  }
+
+  /* 4. Немного уменьшаем заголовки на телефоне для красоты */
+  .text-block h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+}
